@@ -217,17 +217,11 @@ int main()
     /// Создаем сущность трубы
     pipe_properties_t pipe;
 
-    /// Задаем сетку трубы
-    pipe.profile.coordinates = { 0, 1000, 2000 };
-
-    /// Задаем высотные отметки и 
-    pipe.profile.heights = vector<double>(pipe.profile.coordinates.size(), 0);
+    /// Создаем сущность нефти
+    oil_parameters_t oil;
 
     /// Создаем буфер
     ring_buffer_t<vector<double>> buffer(1, pipe.profile.heights);
-
-    /// Создаем сущность нефти
-    oil_parameters_t oil;
 
     /// Задаем объемнй расход нефти, [м3/с]
     double Q = 0.8;
