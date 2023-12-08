@@ -231,7 +231,7 @@ int main()
 
     // Задаем конечное давление
     double Pout = 5e5;
-	
+
 	// Вектор для хранения профиля давления
 	vector<double> profile(0, pipe.profile.getPointCount());
 
